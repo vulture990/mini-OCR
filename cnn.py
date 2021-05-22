@@ -1,0 +1,2 @@
+import mnist
+print("hey")
