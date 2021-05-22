@@ -58,6 +58,11 @@ class Convolution:#3x3 tensor
         for region, i, j in self.iterate_regions(input):
             # this is exactly when convolution happens
             output[i, j] = np.sum(region * self.filters, axis=(1, 2))
+            """
+                 np.sum() the result of the previous step using axis=(1, 2), 
+                 which produces a 1d array of length num_filters where each element 
+                 contains the convolution result for the corresponding filter.
+            """
         return output
 
 
